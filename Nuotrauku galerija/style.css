@@ -1,0 +1,13 @@
+:root {
+    margin: auto;
+    padding: auto;
+    display: grid inline-grid;
+    background-color: lightgray;
+}
+
+img {
+    display: inline-grid;
+    margin: 5px;
+    width: 300px;
+    height: 300px;
+}
