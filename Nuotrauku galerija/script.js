@@ -47,7 +47,7 @@ data.forEach(img=> {
   document.getElementById('foto').appendChild(createImage(img))
   });
 
-const imgClick = document.querySelectorAll('img');
+const imgClick = Object.values(data);
   
 let zoomImgDiv = document.createElement ('div');
   zoomImgDiv.id = 'zoomed-img';
