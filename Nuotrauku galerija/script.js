@@ -54,7 +54,7 @@ let zoomImgDiv = document.createElement ('div');
 
 /*function createArrow (arrowLeft) {
   let arrowLeft = document.createElement ('img');
-  img.src = 'https://www.google.com/imgres?imgurl=https%3A%2F%2Ficons-for-free.com%2Ficonfiles%2Fpng%2F512%2Farrow%2Bleft%2Bchevron%2Bchevronleft%2Bleft%2Bleft%2Bicon%2Bicon-1320185731545502691.png&imgrefurl=https%3A%2F%2Ficons-for-free.com%2Farrow%2Bleft%2Bchevron%2Bchevronleft%2Bleft%2Bleft%2Bicon%2Bicon-1320185731545502691%2F&tbnid=aBwnDGhzL0MJIM&vet=12ahUKEwjx_avrxtPxAhVVsyoKHWfND8wQMygMegUIARCxAQ..i&docid=L2AwNlDdH01RxM&w=512&h=512&q=arrow%20left%20png&ved=2ahUKEwjx_avrxtPxAhVVsyoKHWfND8wQMygMegUIARCxAQ';
+  img.src = 'arrow-left.png';
   img.id = arrow-left;
   return imgArrowLeft;
 }*/
