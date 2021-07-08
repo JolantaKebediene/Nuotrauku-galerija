@@ -11,3 +11,7 @@ img {
     width: 300px;
     height: 300px;
 }
+
+.zoomed-img {
+    background: rgba(0, 0, 0, 0.5);
+}

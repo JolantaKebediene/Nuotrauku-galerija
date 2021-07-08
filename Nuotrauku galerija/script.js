@@ -36,25 +36,27 @@ const data = [
       alt: "whale tale above water surface",
     },
   ]
+  function createImage(imgData) {
+    let img = document.createElement('img');
+    img.src = imgData.src;
+    img.alt = imgData.alt;
+    return img;
+  };
   
-function createImage (imgSrc, imgAlt) {
-  let img = document.createElement ('img');
-  img.src = imgSrc;
-  img.alt = imgAlt;
-  return img;
-}
-
-data.forEach(img => {
-  for (let i=0; i < data.length; i++){
-  document.getElementById('Foto').appendChild(createImage (data[i]['src'], data[i]['alt']))
-}})
+data.forEach(img=> {
+  document.getElementById('foto').appendChild(createImage(img))
+  });
 
 const imgClick = document.querySelectorAll('img');
+  
+let zoomImgDiv = document.createElement ('div');
+  zoomImgDiv.id = 'zoomed-img';
+
 
 function createImageZoomed (imgSrc, imgAlt) {
   let img = document.createElement ("img");
-  img.src = imgSrc;
-  img.alt = imgAlt;
+  img.src = imgData.src;
+  img.alt = imgData.alt;
   img.width = 'max-width';
   img.height = 'max-height';
 return img;
