@@ -53,7 +53,7 @@ let zoomImgDiv = document.createElement ('div');
   zoomImgDiv.id = 'zoomed-img';
 
 
-function createImageZoomed (imgSrc, imgAlt) {
+/*function createImageZoomed (imgSrc, imgAlt) {
   let img = document.createElement ("img");
   img.src = imgData.src;
   img.alt = imgData.alt;
@@ -64,4 +64,4 @@ return img;
 
 imgClick.addEventListener("click", (eventZoom) => {
   createImageZoomed();
-})
+})*/
