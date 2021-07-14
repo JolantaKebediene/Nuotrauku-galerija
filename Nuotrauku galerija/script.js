@@ -47,10 +47,10 @@ data.forEach(img=> {
   document.getElementById('foto').appendChild(createImage(img))
   });
 
-const imgClick = Object.values(data);
+//const imgClick = createImage(img);
   
-let zoomImgDiv = document.createElement ('div');
-  zoomImgDiv.id = 'zoomed-img';
+//const zoomImgDiv = document.createElement('div');
+//  zoomImgDiv.id = 'zoomed-img';
 
 /*function createArrow (arrowLeft) {
   let arrowLeft = document.createElement ('img');
@@ -68,6 +68,6 @@ function createImageZoomed (imgSrc, imgAlt) {
 return img;
 }
 
-imgClick.addEventListener("click", (eventZoom) => {
-  createImageZoomed();
-})
+//img.addEventListener("click", (eventZoom) => {
+//createImageZoomed();
+//})

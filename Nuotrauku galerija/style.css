@@ -1,11 +1,24 @@
 :root {
     background-color: lightgray;
+    width: rem;
+    margin: auto;
+}
+
+#foto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: auto;
+    width: max-content;
 }
 
 img {
-    margin: 5px;
-    width: 300px;
-    height: 300px;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    width: 200px;
+    height: 200px;
 }
 
 .zoomed-img {
