@@ -36,7 +36,8 @@ const data = [
       alt: "whale tale above water surface",
     },
   ]
-  function createImage(imgData) {
+
+function createImage(imgData) {
     let img = document.createElement('img');
     img.src = imgData.src;
     img.alt = imgData.alt;
@@ -47,27 +48,24 @@ data.forEach(img=> {
   document.getElementById('foto').appendChild(createImage(img))
   });
 
-//const imgClick = createImage(img);
-  
-//const zoomImgDiv = document.createElement('div');
-//  zoomImgDiv.id = 'zoomed-img';
+function zoomImg() {
+//create new div element
+const newDiv = document.createElement('div');
+//give ID to newDiv
+  zoomImgDiv.id = 'zoomed-img';
+//create array in newDiv
+newDiv.appendChild(createArrow(arrowLeft));
+const currentDiv = document.getElementById('foto');
+document.body.insertBefore(newDiv, currentDiv);
+}
 
-/*function createArrow (arrowLeft) {
+
+function createArrow () {
   let arrowLeft = document.createElement ('img');
   img.src = 'arrow-left.png';
   img.id = arrow-left;
-  return imgArrowLeft;
-}*/
-
-function createImageZoomed (imgSrc, imgAlt) {
-  let img = document.createElement ("img");
-  img.src = imgData.src;
-  img.alt = imgData.alt;
-  img.width = 'max-width';
-  img.height = 'max-height';
-return img;
+  return arrowLeft;
 }
 
-//img.addEventListener("click", (eventZoom) => {
-//createImageZoomed();
-//})
+let img = createImage()
+img.addEventListener("click", () => {console.log ('click')});
