@@ -60,7 +60,7 @@ function zoomImg() {
   const currentDiv = document.getElementById('foto');
   document.body.insertBefore(newDiv, currentDiv);
   //newDiv.appendChild (bigImg());
-  //document.body.insertBefore(newDiv, currentDiv);
+  //document.body.insertAfter(newDiv, currentDiv);
   newDiv.appendChild(arrowRight());
   document.body.insertBefore(newDiv, currentDiv); 
 };
@@ -81,7 +81,6 @@ function arrowRight() {
 
 function bigImg() {
   let bigImg = document.createElement('img');
-  bigImg.src= imgData.src; //??????
+  bigImg.src= currentTarget.src; //??????
   bigImg.id='big-img' 
 }
-
