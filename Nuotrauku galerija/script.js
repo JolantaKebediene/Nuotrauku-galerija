@@ -37,18 +37,22 @@ const data = [
   },
 ]
 
-function createImage(imgData) {
-  let img = document.createElement('img');
-  img.src = imgData.src;
-  img.alt = imgData.alt;
-  img.className = 'small-img';
-  img.addEventListener('click', zoomImg)
-  return img;
-};
+let imageIndex = 0;
 
 data.forEach((img, index)=> {
+  function createImage(imgData) {
+    let img = document.createElement('img');
+    img.src = imgData.src;
+    img.alt = imgData.alt;
+    img.className = 'small-img';
+    img.addEventListener('click', () => {
+      imageIndex = index;
+      zoomImg();
+    });
+    return img;
+  };
+   
   document.getElementById('foto').appendChild(createImage(img))
-  let imgIndex = index;
 });
 
 function zoomImg() {
@@ -76,7 +80,6 @@ function arrowRight() {
 }
 
 function bigImg(imgData) {
-  imgIndex=img.index
   let bigImg = document.createElement('img');
   bigImg.src= data[imgIndex].src; //kaip gauti paspaustuosnuotraukos src???? :/
   bigImg.id='big-img' ;
