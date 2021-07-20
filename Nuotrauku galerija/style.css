@@ -47,5 +47,9 @@
 }
 
 #big-img {
+align-self: center;
+justify-self: center;
+width: 75%;
+height: 75%;
 
 }
