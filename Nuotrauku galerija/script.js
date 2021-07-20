@@ -39,9 +39,9 @@ const data = [
 
 let imageIndex = 0;
 
-data.forEach((img, index)=> {
-  function createImage(imgData) {
-    let img = document.createElement('img');
+data.forEach((imgData, index)=> {
+    const img = document.createElement('img');
+
     img.src = imgData.src;
     img.alt = imgData.alt;
     img.className = 'small-img';
@@ -49,20 +49,18 @@ data.forEach((img, index)=> {
       imageIndex = index;
       zoomImg();
     });
-    return img;
-  };
    
-  document.getElementById('foto').appendChild(createImage(img))
+  document.getElementById('foto').appendChild(img)
 });
 
 function zoomImg() {
   const newDiv = document.createElement('div'); //create new div element
   newDiv.id='zoomed-img'; //give ID to newDiv
   newDiv.appendChild(arrowLeft());//create left arrow in newDiv
+  newDiv.appendChild(bigImg()); //create bigImg
   newDiv.appendChild(arrowRight()); //create right arrow in newDiv
   const currentDiv = document.getElementById('foto');
   document.body.insertBefore(newDiv, currentDiv); //insert new div with big picture before foto gallery
-  newDiv.appendChild(bigImg(img)); //kazkas negerai su img.src funkcijoje zemiau
 };
 
 function arrowLeft() {
@@ -79,9 +77,9 @@ function arrowRight() {
   return arrowRight;
 }
 
-function bigImg(imgData) {
+function bigImg() {
   let bigImg = document.createElement('img');
-  bigImg.src= data[imgIndex].src; //kaip gauti paspaustuosnuotraukos src???? :/
+  bigImg.src= data[imageIndex].src; //kaip gauti paspaustuosnuotraukos src???? :/
   bigImg.id='big-img' ;
   return bigImg;
 }
