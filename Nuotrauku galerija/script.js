@@ -62,7 +62,7 @@ function zoomImg() {
   const currentDiv = document.getElementById('foto');
   document.body.insertBefore(newDiv, currentDiv); //insert new div with big picture before foto gallery
   newDiv.addEventListener('click', () => {
-    { console.log('close')}
+    newDiv.remove();
   });
 };
 
@@ -88,29 +88,7 @@ function arrowRight() {
 
 function bigImg() {
   let bigImg = document.createElement('img');
-  bigImg.src= data[imageIndex].src; //kaip gauti paspaustuosnuotraukos src???? :/
+  bigImg.src= data[imageIndex].src;
   bigImg.id='big-img' ;
   return bigImg;
 };
-
-
-/*arrowLeft.addEventListener ('click', () => {
-  if (imageIndex === 0) {
-    imageIndex = data.length -1;
-    bigImg.src = data[imageIndex].src;
-  }
-  else {
-    imageIndex -= 1;
-    bigImg.src = data[imageIndex].src;
-  }
-})*/
-
-/*arrowLeft.addEventListener('click', prevImg)
-function prevImg(){
-  if
-}*/
-//function closeImg() {
-//const closeImg=document.getElementById('zoomed-img');
-//closeImg.remove();
-//}
-//console.log (closeImg())
