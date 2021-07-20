@@ -61,12 +61,18 @@ function zoomImg() {
   newDiv.appendChild(arrowRight()); //create right arrow in newDiv
   const currentDiv = document.getElementById('foto');
   document.body.insertBefore(newDiv, currentDiv); //insert new div with big picture before foto gallery
+  newDiv.addEventListener('click', () => {
+    { console.log('close')}
+  });
 };
 
 function arrowLeft() {
   let arrowLeft = document.createElement('img');
   arrowLeft.src = 'arrow-left.png';
   arrowLeft.id = 'arrow-left';
+  arrowLeft.addEventListener('click', () => {
+    { console.log('prev')}
+  });
   return arrowLeft;
 }
 
@@ -74,6 +80,9 @@ function arrowRight() {
   let arrowRight = document.createElement('img');
   arrowRight.src = 'arrow-right.png';
   arrowRight.id = 'arrow-right';
+  arrowRight.addEventListener('click', () => {
+    { console.log("next")}
+  });
   return arrowRight;
 }
 
@@ -82,7 +91,19 @@ function bigImg() {
   bigImg.src= data[imageIndex].src; //kaip gauti paspaustuosnuotraukos src???? :/
   bigImg.id='big-img' ;
   return bigImg;
-}
+};
+
+
+/*arrowLeft.addEventListener ('click', () => {
+  if (imageIndex === 0) {
+    imageIndex = data.length -1;
+    bigImg.src = data[imageIndex].src;
+  }
+  else {
+    imageIndex -= 1;
+    bigImg.src = data[imageIndex].src;
+  }
+})*/
 
 /*arrowLeft.addEventListener('click', prevImg)
 function prevImg(){
