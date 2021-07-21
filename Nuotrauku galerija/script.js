@@ -82,7 +82,6 @@ function arrowLeft() {
   arrowLeft.id = 'arrow-left';
   arrowLeft.addEventListener('click', function () {
    imageIndex--;
-   (imageIndex > data.length -1);
    document.getElementsById('bigImg').src = data[imageIndex].src;
     {console.log('prev')}
   });
@@ -94,7 +93,7 @@ function arrowRight() {
   arrowRight.src = 'arrow-right.png';
   arrowRight.id = 'arrow-right';
   arrowRight.addEventListener('click', () => {
-    //data[imageIndex += 1].src
+    data[imageIndex += 1].src
     { console.log("next")}
   });
   return arrowRight;
