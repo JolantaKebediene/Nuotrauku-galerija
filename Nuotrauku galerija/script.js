@@ -83,7 +83,7 @@ function arrowLeft() {
   arrowLeft.addEventListener('click', function () {
    imageIndex--
    if (imageIndex < 0) {
-     arrowLeft.remove();
+     imageIndex = data.length -1;
    }
    document.getElementsById('bigImg').src = data[imageIndex].src;
   });
@@ -96,8 +96,8 @@ function arrowRight() {
   arrowRight.id = 'arrow-right';
   arrowRight.addEventListener('click', function () {
       imageIndex++;
-      if (imageIndex > data.length) {
-        arrowRight.remove();
+      if (imageIndex > data.length -1) {
+        imageIndex = 0;
       }
       document.getElementsById('bigImg').src = data[imageIndex].src;
   });
