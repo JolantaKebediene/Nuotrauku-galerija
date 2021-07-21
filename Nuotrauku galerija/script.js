@@ -85,7 +85,7 @@ function arrowLeft() {
    if (imageIndex < 0) {
      imageIndex = data.length -1;
    }
-   document.getElementsById('bigImg').src = data[imageIndex].src;
+   document.getElementById('bigImg').src = data[imageIndex].src;
   });
   return arrowLeft;
 }
@@ -99,7 +99,7 @@ function arrowRight() {
       if (imageIndex > data.length -1) {
         imageIndex = 0;
       }
-      document.getElementsById('bigImg').src = data[imageIndex].src;
+      document.getElementById('bigImg').src = data[imageIndex].src;
   });
   return arrowRight;
 }
