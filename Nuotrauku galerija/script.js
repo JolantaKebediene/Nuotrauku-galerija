@@ -61,17 +61,30 @@ function zoomImg() {
   newDiv.appendChild(arrowRight()); //create right arrow in newDiv
   const currentDiv = document.getElementById('foto');
   document.body.insertBefore(newDiv, currentDiv); //insert new div with big picture before foto gallery
-  newDiv.addEventListener('click', () => {
+  newDiv.addEventListener('click', (event) => {  //nuima listneri nuo div'o elementu, palikdamas tik ant fono
+    let clickValue = String(event.target.id)
+    switch (clickValue){
+    case 'arrow-left': arrowLeft();
+    break
+    case 'big-img': bigImg();
+    break
+    case 'arrow-right': arrowRight();
+    break
+    default:
     newDiv.remove();
-  });
+    } 
+  })
 };
 
 function arrowLeft() {
   let arrowLeft = document.createElement('img');
   arrowLeft.src = 'arrow-left.png';
   arrowLeft.id = 'arrow-left';
-  arrowLeft.addEventListener('click', () => {
-    { console.log('prev')}
+  arrowLeft.addEventListener('click', function () {
+   imageIndex--;
+   (imageIndex > data.length -1);
+   document.getElementsById('bigImg').src = data[imageIndex].src;
+    {console.log('prev')}
   });
   return arrowLeft;
 }
@@ -81,6 +94,7 @@ function arrowRight() {
   arrowRight.src = 'arrow-right.png';
   arrowRight.id = 'arrow-right';
   arrowRight.addEventListener('click', () => {
+    //data[imageIndex += 1].src
     { console.log("next")}
   });
   return arrowRight;
