@@ -81,9 +81,11 @@ function arrowLeft() {
   arrowLeft.src = 'arrow-left.png';
   arrowLeft.id = 'arrow-left';
   arrowLeft.addEventListener('click', function () {
-   imageIndex--;
+   imageIndex--
+   if (imageIndex < 0) {
+     arrowLeft.remove();
+   }
    document.getElementsById('bigImg').src = data[imageIndex].src;
-    {console.log('prev')}
   });
   return arrowLeft;
 }
@@ -92,9 +94,12 @@ function arrowRight() {
   let arrowRight = document.createElement('img');
   arrowRight.src = 'arrow-right.png';
   arrowRight.id = 'arrow-right';
-  arrowRight.addEventListener('click', () => {
-    data[imageIndex += 1].src
-    { console.log("next")}
+  arrowRight.addEventListener('click', function () {
+      imageIndex++;
+      if (imageIndex > data.length) {
+        arrowRight.remove();
+      }
+      document.getElementsById('bigImg').src = data[imageIndex].src;
   });
   return arrowRight;
 }
